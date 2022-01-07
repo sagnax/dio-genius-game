@@ -3,9 +3,38 @@ body {
   background-color: darkslategray;
 }
 
+.title {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.score {
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+}
+
+.footer {
+  position:fixed;
+  left:0px;
+  bottom:0px;
+  height:30px;
+  width:100%;
+}
+
+.footer-text {
+  text-align: center;
+  color: gainsboro;
+}
+
+.container {
+  padding: 20px;
+}
+
 .main-game {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,8 +48,8 @@ body {
   border: 2px solid lightgray;
   background-color: white;
   border-radius: 100%;
-  width: 700px;
-  height: 700px;
+  width: 24em;
+  height: 24em;
 }
 
 .blue {

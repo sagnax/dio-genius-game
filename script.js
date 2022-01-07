@@ -14,6 +14,8 @@ const red = document.getElementsByClassName('red')[0];
 const yellow = document.getElementsByClassName('yellow')[0];
 const blue = document.getElementsByClassName('blue')[0];
 
+const scoreElement = document.getElementsByClassName('score')[0];
+
 // Creates the random order
 let createOrder = () => {
   let colorIndex = Math.floor(Math.random() * 4);
@@ -43,13 +45,14 @@ let lightColor = (element, time) => {
 let checkOrder = () => {
   clickedOrder.forEach((value, index) => {
     if (value != order[index]) {
+      score--;
       gameOver();
       return;
     }
   });
 
   if (clickedOrder.length == order.length){
-    alert(`Score: ${score}\nYou Win!\nContinue.`);
+    alert(`Score: ${score}\nGreat!\nContinue.`);
     nextLevel();
   }
 }
@@ -84,6 +87,7 @@ let createColorElement = (color) => {
 
 // Starts a new game
 let nextLevel = () => {
+  scoreElement.innerHTML = `Score: ${score}`;
   score++;
   createOrder();
 }
@@ -97,17 +101,19 @@ let gameOver = () => {
   playGame();
 }
 
+// Starts the game
 let playGame = () => {
-  alert('Welcome to the Genius Game!\nStarting a new game.');
+  alert('Welcome to the Genius Game!\nLETS GOOOO.');
   score = 0;
 
   nextLevel();
 }
 
+// Adds links the onclicks to the actual functions
 green.onclick = () => click(0);
 red.onclick = () => click(1);
 yellow.onclick = () => click(2);
 blue.onclick = () => click(3);
 
-
+// LETS GO
 playGame();
