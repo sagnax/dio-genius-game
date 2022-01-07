@@ -3,6 +3,11 @@ body {
   background-color: darkslategray;
 }
 
+a {
+  text-decoration: none;
+  color: lightskyblue;
+}
+
 .title {
   text-align: center;
   color: white;
@@ -19,7 +24,7 @@ body {
   position:fixed;
   left:0px;
   bottom:0px;
-  height:30px;
+  height:40px;
   width:100%;
 }
 
